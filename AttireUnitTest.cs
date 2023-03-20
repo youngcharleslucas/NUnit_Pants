@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using WearPants;
+using static WearPants.Pants;
+using static WearPants.Days;
 
 namespace WearPants
 {
@@ -35,20 +36,20 @@ namespace WearPants
         }
 
         //Arrange, Act, Assert
-        [TestCase(Days.SUNDAY, Pants.PARTY)]
+        [TestCase(SUNDAY, PARTY)]
         [Test]
         public void WhatToWear_RightPantsForSunday(string day, string pant)
         {
             Assert.AreEqual(sunday, attire.WhatToWear(day, pant));
         }
-        [TestCase(Days.MONDAY, Pants.DRESS)]
+        [TestCase(MONDAY, DRESS)]
         [Test]
         public void WhatToWear_RightPantsForMonday(string day, string pant)
         {
             Assert.AreEqual(monday, attire.WhatToWear(day, pant));
         }
 
-        [TestCase(Days.TUESDAY, Pants.DRESS)]
+        [TestCase(TUESDAY, DRESS)]
         [Test]
         public void WhatToWear_RightPantsForTuesday(string day, string pant)
         {
@@ -56,27 +57,27 @@ namespace WearPants
         }
 
         //It's only Wednesday!! It is too early in the week for party pants!
-        [TestCase(Days.WEDNESDAY, Pants.PARTY)]
+        [TestCase(WEDNESDAY, PARTY)]
         [Test]
         public void WhatToWear_RightPantsForWednesday(string day, string pant)
         {
             Assert.AreEqual(wednesday, attire.WhatToWear(day, pant));
         }
 
-        [TestCase(Days.THURSDAY, Pants.DRESS)]
+        [TestCase(THURSDAY, DRESS)]
         [Test]
         public void WhatToWear_RightPantsForThursday(string day, string pant)
         {
             Assert.AreEqual(thursday, attire.WhatToWear(day, pant));
         }
-        [TestCase(Days.FRIDAY, Pants.DRESS)]
+        [TestCase(FRIDAY, DRESS)]
         [Test]
         public void WhatToWear_RightPantsForFriday(string day, string pant)
         {
             Assert.AreEqual(friday, attire.WhatToWear(day, pant));
         }
 
-        [TestCase(Days.SATURDAY, Pants.PARTY)]
+        [TestCase(SATURDAY, PARTY)]
         [Test]
         public void WhatToWear_RightPantsForSaturday(string day, string pant)
         {
