@@ -40,20 +40,20 @@ namespace WearPants
         [Test]
         public void WhatToWear_RightPantsForSunday(string day, string pant)
         {
-            Assert.AreEqual(sunday, attire.WhatToWear(day, pant));
+            Assert.That(attire.WhatToWear(day, pant), Is.EqualTo(sunday));
         }
         [TestCase(MONDAY, DRESS)]
         [Test]
         public void WhatToWear_RightPantsForMonday(string day, string pant)
         {
-            Assert.AreEqual(monday, attire.WhatToWear(day, pant));
+            Assert.That(attire.WhatToWear(day, pant), Is.EqualTo(monday));
         }
 
         [TestCase(TUESDAY, DRESS)]
         [Test]
         public void WhatToWear_RightPantsForTuesday(string day, string pant)
         {
-            Assert.AreEqual(tuesday, attire.WhatToWear(day, pant));
+            Assert.That(attire.WhatToWear(day, pant), Is.EqualTo(tuesday));
         }
 
         //It's only Wednesday!! It is too early in the week for party pants!
@@ -61,27 +61,27 @@ namespace WearPants
         [Test]
         public void WhatToWear_RightPantsForWednesday(string day, string pant)
         {
-            Assert.AreEqual(wednesday, attire.WhatToWear(day, pant));
+            Assert.That(attire.WhatToWear(day, pant), Is.EqualTo(wednesday));
         }
 
         [TestCase(THURSDAY, DRESS)]
         [Test]
         public void WhatToWear_RightPantsForThursday(string day, string pant)
         {
-            Assert.AreEqual(thursday, attire.WhatToWear(day, pant));
+            Assert.That(attire.WhatToWear(day, pant), Is.EqualTo(thursday));
         }
         [TestCase(FRIDAY, DRESS)]
         [Test]
         public void WhatToWear_RightPantsForFriday(string day, string pant)
         {
-            Assert.AreEqual(friday, attire.WhatToWear(day, pant));
+            Assert.That(attire.WhatToWear(day, pant), Is.EqualTo(friday));
         }
 
         [TestCase(SATURDAY, PARTY)]
         [Test]
         public void WhatToWear_RightPantsForSaturday(string day, string pant)
         {
-            Assert.AreEqual(saturday, attire.WhatToWear(day, pant));
+            Assert.That(attire.WhatToWear(day, pant), Is.EqualTo(saturday));
         }
     }
 }
